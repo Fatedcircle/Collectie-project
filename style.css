@@ -1,0 +1,105 @@
+body {
+    background-color: aquamarine;
+}
+
+body .container-lg {
+    margin-top: 20px;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-item {
+    margin: 0 20px 0 20px;
+}
+
+.section {
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.game figure img {
+    max-width: 300px;
+}
+.content {
+    margin-top: 20px;
+}
+form {
+    margin: 10px auto;
+}
+.home form input {
+    margin-top: 10px;
+}
+.home .card, .recent .card, .game .card {
+    background-color: rgb(45, 223, 164);
+    margin-top: 15px;
+}
+.home .menu-rechts .card, .game .interesant .card{
+    background-color: chocolate;
+}
+.home .card-img-top {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px auto;
+}
+
+.home .card-body {
+    margin: 0 auto;
+}
+footer {
+    position: relative;
+    bottom: 0;
+
+}
+div.nieuw-item .row {
+    align-items: baseline;
+}
+.game .interesant .card-img-top {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 5px auto;
+}
+.delete-form {
+    float: right;
+}
+.game .btn.btn-danger {
+    margin-top: -1rem;
+    }
+@media (max-width: 991px){
+    .home .section {
+        display: block;
+    }
+    .home form {
+        display: flex;
+        margin: 10px;
+    }
+    .home form label, .home form select {
+        margin: 10px;
+    }
+    .menu-rechts {
+        display: none;
+    }
+}
+@media (min-width: 992px){
+    .nav-item.recent {
+        display: none;
+    }
+}
+/* @media (min-width: 768px) {
+    .section .navbar-toggler {
+        display: none;
+    }
+    .menu-links, .main, .menu-rechts {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .section .navbar-toggler {
+        margin: 0 10px 0 10px;
+        border: 1px solid #000
+    }
+} */
