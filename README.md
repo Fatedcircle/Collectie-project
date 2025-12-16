@@ -1,36 +1,101 @@
-# Game collectie project
+# Game Collectie Webapplicatie (Legacy PHP)
+Vanilla PHP/MySQL CRUD-app (2023 teamlead-periode). Laravel-rebuild gepland.
 
-## Om dit te gebruiken heb je het volgende nodig
-
-1. Een Php server en een mysql server voor lokaal gebruik kan je [Xampp](https://www.apachefriends.org/) gebruiken.
-2. Indien noodzakelijk moet je wel even een mysql user aanmaken om de imports te kunnen gebruiken buiten de root om en het connectie.php bestand aanpassen naar de juiste login
-3. Ook heb je de bijgevoegde import.sql nodig of de import-met-sample.sql nodig.
-
-## Hoe te gebruiken zonder Sample data
-1. Je importeerd het import.sql bestand in je database.
-2. Je gaat naar de registreer pagina en kiest een gebruikersnaam en password die vul je in het formulier in.
-3. Na het registreren word je doorgestuurd naar de login pagina daar kan je je inloggen met je zojuist aangemaakte gebruikersnaam en password.
-4. Wanneer je ingelogd bent heb je in de navigatie balk nieuw en logout staan in plaats van login en registreer.
-5. Je kan een nieuw item toevoegen aan de database door op nieuw te klikken het formulier in te vullen en te versturen.
-6. Na dat je items hebt toegevoegd aan de database kan je op home klikken en dan staat je item daar.
-
-## Hoe te gebruiken met de sample data
-1. Je importeerd het import-met-sample.sql bestand in je database.
-2. Je klikt op login in de navigatie balk in het formulier vul je bij gebruikersnaam ``test`` in en bij wachtwoord ``test``
-3. de rest is hetzelfde van punt 4 tot punt 6 van hoe te gebruiken zonder sample data.
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-8511FA?style=for-the-badge&logo=bootstrap&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 
-### Functies van de website
+## Over het project
 
-Je kan je collectie games laten zien door middel van een database connectie.  
-Je kan nieuwe games toevoegen en die dus vervolgens laten zien.  
-Je kan filteren op basis van welk systeem de games zijn en op categorieën.  
-Ook kan het gesorteerd worden op ``titel``, ``systeem`` of ``categorie``.
-Aan de rechterkant staan de recent toegevoegde items van iedereen die de website gebruikt met de naam wie het heeft toegevoegd en je kan meer details bekijken.  
-In het midden staan de items die je zelf hebt toegevoegd en die kun je ook filteren zoals eerder genoemd.  
-Bij nieuw kan je niet alleen games toevoegen maar ook andere systemen en/of categorieën.  
-Als er items zijn toegevoegd kan je de details bekijken van het betreffende item daar kan je als je zelf het item hebt toegevoegd het item editen of verwijderen.  
-Bij het bekijken van de details van een item staan aan de rechterkant.
-Er word gebruik gemaakt van sessies dus als je de browser afsluit ben je uitgelogd.
-De filter op de homepage word uit zichzelf aangepast als er nieuwe systemen of categorieën toegevoegd worden.
-Je kan alleen de systeemeisen, de categorie, wie het heeft toegevoegd en het systeem zelf niet aanpassen in het edit formulier extra systemen en categorieën kunnen daar ook niet toegevoegd worden.
+Dit project is een **PHP/MySQL webapplicatie** waarmee gebruikers hun persoonlijke gamecollectie kunnen beheren en bekijken.  
+Gebruikers kunnen zich registreren, inloggen en hun eigen games toevoegen, bewerken en verwijderen. Daarnaast biedt de applicatie filter- en sorteermogelijkheden en toont zij recent toegevoegde items van andere gebruikers.
+
+Dit project is ontwikkeld om ervaring op te doen met **server-side webdevelopment**, **databases**, **gebruikersauthenticatie** en **CRUD-functionaliteit**.
+
+---
+
+## Gebruikte technologieën
+
+- PHP (server-side logica)
+- MySQL (relationele database)
+- HTML / CSS
+- PHP-sessies voor authenticatie
+- XAMPP (lokale developmentomgeving)
+
+---
+
+## Functionaliteiten
+
+- Gebruikersregistratie en login met sessiebeheer
+- Persoonlijke gamecollectie per gebruiker
+- Toevoegen, bewerken en verwijderen van games
+- Ondersteuning voor meerdere systemen en categorieën
+- Filteren op:
+  - Systeem
+  - Categorie
+- Sorteren op:
+  - Titel
+  - Systeem
+  - Categorie
+- Overzicht van recent toegevoegde items door alle gebruikers
+- Detailpagina per game met aanvullende informatie
+- Dynamische filters die automatisch meeschalen met nieuw toegevoegde systemen en categorieën
+- Toegangscontrole: alleen de eigenaar van een item kan deze bewerken of verwijderen
+
+---
+
+## Installatie & Setup
+
+### Benodigdheden
+
+- PHP-server en MySQL-server  
+  *(Voor lokaal gebruik is [XAMPP](https://www.apachefriends.org/) aanbevolen)*
+- MySQL-gebruiker met voldoende rechten
+- Eén van de meegeleverde SQL-bestanden:
+  - `import.sql`
+  - `import-met-sample.sql`
+
+### Configuratie
+
+1. Importeer het gewenste SQL-bestand in je MySQL-database.
+2. Pas indien nodig het bestand `connectie.php` aan met de juiste databasegegevens.
+3. Start de PHP-server (bijvoorbeeld via XAMPP).
+4. Open de applicatie in de browser.
+
+---
+
+## Gebruik zonder sample data
+
+1. Importeer `import.sql`.
+2. Registreer een nieuwe gebruiker via de registratiepagina.
+3. Log in met de aangemaakte gegevens.
+4. Voeg nieuwe games toe via de optie **Nieuw** in de navigatie.
+5. Bekijk en beheer je collectie via de homepage.
+
+---
+
+## Gebruik met sample data
+
+1. Importeer `import-met-sample.sql`.
+2. Log in met:
+   - **Gebruikersnaam:** `test`
+   - **Wachtwoord:** `test`
+3. De verdere functionaliteit is gelijk aan het gebruik zonder sample data.
+
+---
+
+## Architectuur & Ontwerpkeuzes
+
+- Authenticatie wordt afgehandeld via PHP-sessies; bij het sluiten van de browser wordt de gebruiker automatisch uitgelogd.
+- Filters en sorteermogelijkheden worden dynamisch opgebouwd op basis van database-inhoud.
+- Bewerkrechten zijn bewust beperkt om dataconsistentie te waarborgen (bijvoorbeeld vaste systeemeisen en categorieën).
+
+---
+
+## Status & Roadmap
+
+✅ Production-ready (2023)  
+⏳ Laravel + React / tailwind
+
+**Laravel Developer cert (2024)** – Perfecte basis voor Outlawz PHP-stack.
