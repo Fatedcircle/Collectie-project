@@ -95,8 +95,9 @@ Dit project is ontwikkeld om ervaring op te doen met **server-side webdevelopmen
 
 ## Status & Roadmap
 
-✅ Legacy PHP (functioneel, 2023) 
-⏳ Laravel + React / tailwind
+- ✅ Legacy PHP (functioneel, 2023)
+- ⏳ Laravel + React / tailwind
 
 **Laravel Developer cert (2024)
+
 
