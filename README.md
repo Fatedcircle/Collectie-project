@@ -95,7 +95,7 @@ Dit project is ontwikkeld om ervaring op te doen met **server-side webdevelopmen
 
 ## Status & Roadmap
 
-✅ Production-ready (2023)  
+✅ Legacy PHP (functioneel, 2023)  
 ⏳ Laravel + React / tailwind
 
 **Laravel Developer cert (2024)** – Perfecte basis voor Outlawz PHP-stack.
